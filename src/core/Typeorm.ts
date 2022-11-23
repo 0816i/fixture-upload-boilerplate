@@ -1,4 +1,5 @@
 import { DatabaseConfig } from "src/config/Database";
+import { ExampleModel } from "src/model/ExampleModel";
 import { DataSource } from "typeorm";
 
 export const MysqlClient = new DataSource({
@@ -10,5 +11,5 @@ export const MysqlClient = new DataSource({
   database: DatabaseConfig.database,
   synchronize: false,
   logging: true,
-  entities: [],
+  entities: [ExampleModel],
 });
