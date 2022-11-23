@@ -1,5 +1,3 @@
-import { DatabaseType, DataSourceOptions } from "typeorm";
-
 export const DatabaseConfig = {
   type: (process.env.DATABASE_TYPE ?? "mysql") as any,
   host: process.env.DATABASE_HOST ?? "localhost",
