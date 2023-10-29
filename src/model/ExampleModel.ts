@@ -1,4 +1,4 @@
-import { Entity, PrimaryColumn, VersionColumn } from "typeorm";
+import { Column, Entity, PrimaryColumn, VersionColumn } from "typeorm";
 
 @Entity("ExampleModel")
 export class ExampleModel {
@@ -7,4 +7,19 @@ export class ExampleModel {
 
   @VersionColumn()
   version!: number;
+
+  @Column("varchar", { nullable: false, length: 120 })
+  userId!: string;
+
+  @Column("varchar", { length: 100 })
+  name!: string;
+
+  @Column("varchar", { length: 100 })
+  companyName!: string;
+
+  @Column("varchar", { length: 100 })
+  email!: string;
+
+  @Column("varchar", { length: 100 })
+  phoneNumber!: string;
 }

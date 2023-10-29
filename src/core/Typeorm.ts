@@ -10,6 +10,6 @@ export const MysqlClient = new DataSource({
   password: DatabaseConfig.password,
   database: DatabaseConfig.database,
   synchronize: false,
-  logging: true,
+  logging: false,
   entities: [ExampleModel],
 });
